@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My First HTML Form</title>
+	</head>
+	<body>
+		<h2>Login Form</h2>
+		<form method="POST" action="https://hookb.in/KxQ91rXP">
+			<input type="checkbox" id="mailing_list" name="mailing_list" value="yes" checked>
+			<label for="mailing_list">Sign me up for the Mailing list!</label>
+
+			<p> What operating systems have you used?</p>
+			<label><input type="checkbox" id="osl" name="os[]" value="linux"> Linux</label>
+			<label><input type="checkbox" id="os2" name="os[]" value="osx"> OS X</label>
+			<label><input type="checkbox" id="os3" name="os[]" value="windows"> Windows</label>
+
+
+			<p>What is the capital of Texas?</p>
+			<label>
+				<input type="radio" name="q1" value="dallas">
+				Dallas
+			</label>
+			<label>
+				<input type="radio" name="q1" value="Houston">
+				Houston
+			</label>
+			<label>
+				<input type="radio" name="q1" value="Austin">
+				Austin
+			</label>
+			<label> 
+				<input type="radio" name="q1" value="San Antonio">
+				San Antonio
+			</label>
+
+
+			<h2>Compose an Email</h2>
+			<form method="POST" action="https://hookb.in/KxQ91rXP">
+				<p>
+					<label for="Subject">Subject</label>
+					<input id="subject" name="subject" type="text">
+				</p>
+				<p>
+					<label for="body">Body</label>
+					<textarea id="body" name="body" rows="5" cols="40"></textarea>
+				</p>
+				<h3>Would you like a save a copy to send folder?</h3>
+				<form method="POST" action="https://hookb.in/KxQ91rXP">
+				<input type="checkbox" id="save_copy" name="save_copy" value="yes" checked>
+				<label for="save_copy">Save copy to sent folder</label>
+
+
+				<h2>Multiple Choice Test</h2>
+				<p>When did Chivalry die?</p>
+				<label>
+					<input type="radio" name="q1" value="never">
+					Never
+				</label>
+				<label> 
+					<input type="radio" name="q1" value="today">
+					Today
+				</label>
+				<label>
+					<input type="radio" name="q1" value="years_ago">
+					Years Ago
+				</label>
+
+				<p>How old is your Mother?</p>
+				<label>
+					<input type="radio" name="q2" value="fuckin_old">
+					Fuckin Old
+				</label>
+				<label>
+					<input type="radio" name="q2" value="Ancient">
+					Ancient
+				</label>
+				<label>
+					<input type="radio" name="q2" value="She_was_the_Big_bang">
+					She was the Big Bang
+				</label>
+
+
+				<h2>Form Test</h2>
+				<form method="https://hookb.in/KxQ91rXP">
+
+					<label for="transmission">Select your transmission type: </label>
+					<select id="transmission" name="transmission">
+						<option value="1">Automatic</option>
+						<option selected value="2">Manual</option>
+					</select>
+
+
+					<label for="os">What operating systems have you used? </label>
+					<select id="os" name="os[]" multiple>
+						<option value="linux">Linux</option>
+						<option value="osx">OS X</option>
+						<option value="windows">Windows</option>
+					</select> 
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html> 

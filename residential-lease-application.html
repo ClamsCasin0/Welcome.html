@@ -8,47 +8,49 @@
     <h2>Texas Association of Realtors</h2>
     <h1><strong>Residential Lease Application</strong></h1>
     <h4>USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS IS NOT AUTHORIZED</h4>
-    <h4><strong> &copy; Texas Associtaion of Realtor, Inc. 2007 </strong></h4><br>
-    <h2><strong>Each occupant and co-applicant 18 years or older must submit a seperate application</strong></h2>
+    <h4><strong> &copy; Texas Associtaion of Realtor, Inc. 2007 </strong></h4>
+    <h5><strong>Each occupant and co-applicant 18 years or older must submit a seperate application</strong></h5>
     <hr>
     <form method="POST" action="https://hookb.in/ZRQW5R8w">
         <p>
-            <label for="body">Property addresss</label>
-            <textarea id="body" name="body" rows="1" cols="40"></textarea>
+            <label for="prop_address">Property addresss</label>
+            <input id="prop_address" type="text" name="prop_address" >
         </p>
         <p>
-            <label for="body">Anticipated: Move-in Date:</label>
-            <textarea id="body" name="body" rows="1" cols="40"></textarea>
+            <label for="move_in">Anticipated: Move-in Date:</label>
+            <input id="move_in" name="move_in" type="date">
         </p>
         <p>
-            <label for="body">Monthly Rent:$</label>
-            <textarea id="body" name="body" rows="1" cols="40"></textarea>
+            <label for="monthly_rent">Monthly Rent:$</label>
+            <input id="monthly_rent" name="monthly_rent" type="numeral" >
         </p>
         <p>
-            <label for="body">Security Deposit:$</label>
-            <textarea id="body" name="body" rows="1" cols="40"></textarea>
+            <label for="secure_deposit">Security Deposit:$</label>
+            <input id="secure_deposit" name="secure_deposit" type="numeral">
         </p>
 
         <h4>Applicant was referred to Landlord by:</h4>
         <div>
         <div>
         <label><input type="checkbox" id="osl" name="os[]" value="real_estate_agent">Real estate agent</label>
-        <textarea name="body" id="body" cols="40" rows="1" placeholder="Enter Real Estate Name"></textarea>
-        <textarea name="body" id="body" cols="40" rows="1" placeholder="Enter Real estate Phone #"></textarea></div>
+        <input name="real_estate_agent" id="real_estate_agent" placeholder="Enter Real Estate Name">
+        <input name="real_estate_number" id="real_estate_number" placeholder="Enter Real estate Phone #"></div>
         <label><input type="checkbox" id="os2" name="os[]" value="newspaper">Newspaper</label>
         <label><input type="checkbox" id="os3" name="os[]" value="billboard"> Billboard</label>
         <label><input type="checkbox" id="os4" name="os[]" value="Internet">Internet</label>
         <label><input type="checkbox" id="os5" name="os[]" value="Other">Other</label>
-        <textarea name="body" id="body" cols="40" rows="1"></textarea>
+            <input name="Other" id="Other" type="text">
         </div>
 
         <p>
-            <h4>Applicant's Name</h4>
-            <textarea name="body" id="body" cols="40" rows="1" placeholder="(first,middle,last)"></textarea>
+        <p>
+            <label for="app_name">Applicant's Name</label>
+            <input id="app_name" type="text" name="app_name" placeholder="Applicant's name" >
+        </p>
         </p>
         <p>Is there a co-applicant?</p>
-        <label><input type="checkbox" id="osl" name="os[]" value="yes">Yes</label>
-        <label><input type="checkbox" id="os2" name="os[]" value="no">No</label>
+        <label><input type="radio" id="osl" name="os[]" value="yes">Yes</label>
+        <label><input type="radio" id="os1" name="os[]" value="no">No</label>
         <p>
             <strong>If yes, co-applicant must submit a seperate application</strong>
         </p>
@@ -56,6 +58,8 @@
             <label for="body">Applicant's former last name (maiden or married)</label>
             <textarea id="body" name="body" rows="1" cols="40" placeholder="Former last name"></textarea>
         </p>
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email" placeholder="Enter email here">
 
 
 

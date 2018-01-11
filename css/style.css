@@ -23,6 +23,7 @@
         text-align: center;
         background-color: #fff490;
     }
+
     /* selector for all "em" elements */
     em {
         font-weight: bold;
@@ -30,6 +31,7 @@
     }
 
     ul {
+        font-weight: bolder;
         font-family: "Agency FB";
         list-style-position: inside;
         text-align: center;
@@ -37,6 +39,7 @@
     }
 
     ol {
+        font-weight: bolder;
         font-family: Bastion;
         list-style-type: lower-roman;
         list-style-position: inside;
@@ -45,7 +48,6 @@
 
     /* selector for all elements with class="article" */
     article {
-
         display: table;
         font-family: "Courier New";
         text-align: center;
@@ -60,33 +62,37 @@
         font-size: larger;
         list-style-position: outside;
         text-align: center;
-        border: 3px solid pink;
+        border: 3px solid deeppink;
     }
+
     table.center {
         margin-left: auto;
         margin-right: auto;
     }
 
     body {
-
         background-image: url("https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?h=350&auto=compress&cs=tinysrgb");
         background-size: repeat;
-        
+    }
+
+    p {
+        font-family: Bobcat;
+        font-size: larger;
     }
 
     /* unvisited link (;link) */
     a:link {
-        color:red;
+        color:darkslateblue;
     }
 
     /* visited link (:visited) */
     a:visited {
-        color:black;
+        color:lightpink;
     }
 
     /* mouse hover over link (:hover) */
     a:hover {
-        color:blue;
+        color:firebrick;
         font-size: 20px;
     }
 

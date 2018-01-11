@@ -28,3 +28,7 @@ em {
 .article>a {
     float:right;
 }
+
+#container > section:nth-child(3) > a {
+    font-size: 2em;
+}

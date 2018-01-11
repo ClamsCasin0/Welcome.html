@@ -1,0 +1,71 @@
+
+    /* selector for id="container" */
+    #container {
+        margin: 50px auto;
+        width: 500px;
+        padding: 10px;
+    }
+
+    /*  selector for all "h1" elements
+        that are a descendent of id="container"
+        and have a class of "fancy-header" */
+    h1.fancy-header {
+        color: blue;
+        text-decoration: underline;
+        text-align: center;
+        background-color: #00FF00;
+
+    }
+
+    h2.fancy-header {
+        color: purple;
+        text-decoration: underline;
+        text-align: center;
+    }
+    /* selector for all "em" elements */
+    em {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ol, ul {
+        list-style: upper-alpha; text-align: center;
+    }
+
+
+    /* selector for all elements with class="article" */
+    .article {
+        clear:both;
+        text-align: center;
+        background-color: #FF0000;
+    }
+
+    /*  selector for all "anchor" elements
+        that are a direct child of an element with class="article" */
+
+
+    body {
+        font-family: bolder;
+        background-image: url("https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?h=350&auto=compress&cs=tinysrgb");
+    }
+
+    /* unvisited link (;link) */
+    a:link {
+        color:red;
+    }
+
+    /* visited link (:visited) */
+    a:visited {
+        color:black;
+    }
+
+    /* mouse hover over link (:hover) */
+    a:hover {
+        color:blue;
+    }
+
+    /* active/selected link (:active) */
+    a:active {
+        color:green;
+        font-size: 50px;
+    }

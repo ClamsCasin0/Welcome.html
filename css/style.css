@@ -30,13 +30,14 @@
     }
 
     ul {
-
+        font-family: "Agency FB";
         list-style-position: inside;
         text-align: center;
         list-style-type: circle;
     }
 
     ol {
+        font-family: Bastion;
         list-style-type: lower-roman;
         list-style-position: inside;
         text-align: center;
@@ -55,7 +56,7 @@
     /*  selector for all "anchor" elements
         that are a direct child of an element with class="article" */
     table, td, tr  {
-        font-family: "18thCentury";
+        font-family: AcmeFont;
         font-size: larger;
         list-style-position: outside;
         text-align: center;
@@ -69,8 +70,8 @@
     body {
 
         background-image: url("https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?h=350&auto=compress&cs=tinysrgb");
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-size: repeat;
+        
     }
 
     /* unvisited link (;link) */

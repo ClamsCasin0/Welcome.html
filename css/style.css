@@ -21,6 +21,7 @@
         color: purple;
         text-decoration: underline;
         text-align: center;
+        background-color: #fff490;
     }
     /* selector for all "em" elements */
     em {
@@ -28,25 +29,48 @@
         text-align: center;
     }
 
-    ol, ul {
-        list-style: upper-alpha; text-align: center;
+    ul {
+
+        list-style-position: inside;
+        text-align: center;
+        list-style-type: circle;
     }
 
+    ol {
+        list-style-type: lower-roman;
+        list-style-position: inside;
+        text-align: center;
+    }
 
     /* selector for all elements with class="article" */
-    .article {
-        clear:both;
+    article {
+
+        display: table;
+        font-family: "Courier New";
         text-align: center;
-        background-color: #FF0000;
+        margin: 0px auto 0px auto;
+        background-color: aquamarine;
     }
 
     /*  selector for all "anchor" elements
         that are a direct child of an element with class="article" */
-
+    table, td, tr  {
+        font-family: "18thCentury";
+        font-size: larger;
+        list-style-position: outside;
+        text-align: center;
+        border: 3px solid pink;
+    }
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     body {
-        font-family: bolder;
+
         background-image: url("https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?h=350&auto=compress&cs=tinysrgb");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     /* unvisited link (;link) */
@@ -62,10 +86,11 @@
     /* mouse hover over link (:hover) */
     a:hover {
         color:blue;
+        font-size: 20px;
     }
 
     /* active/selected link (:active) */
     a:active {
         color:green;
-        font-size: 50px;
+        font-size: 15px;
     }

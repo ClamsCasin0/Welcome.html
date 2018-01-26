@@ -4,6 +4,6 @@
     //         console.log("My favorite color is " favoriteColor )
     alert("Welcome to my Website!");
 
-    var favoriteNumber = prompt("What is your color?");
-        console.log("My favorite color is " favoriteColor);
+    var favoriteNumber = prompt("What is your number?");
+        console.log("My favorite color is " favoriteNumber);
         alert("Rad, blue is my favorite color too!");

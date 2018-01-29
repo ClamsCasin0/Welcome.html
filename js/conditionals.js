@@ -224,7 +224,8 @@ console.log(result);
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-    var luckyNumber = Math.floor(Math.random() * 5);
+//kinda worked, but wrong format
+    // var luckyNumber = Math.floor(Math.random() * 5);
 //         return luckyNumber();
 // var luckyNumber
 // (0) = 0.0;
@@ -239,6 +240,7 @@ console.log(result);
 // var luckyNumber
 // (5) = 1;
 
+// do again, change values and name types
 function calculateTotal(luckyNumber, total) {
     if (luckyNumber == 0) {
         return total;
@@ -289,8 +291,71 @@ console.log(calculateTotal(3, 400));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
+
+//work on this
  var luckyNumber = Math.floor(Math.random() * 6);
 var total = prompt("How much was the total amount spent?");
 alert("your lucky number is" + luckyNumber);
 alert("Price before the discount is " + total);
 alert("After the discount,  your total is" + calculateTotal(luckyNumber, total));
+
+
+
+================================= CONDITIONALS BONUSES
+    Bonus 1.
+    Write a function (or multiple functions) that will return
+    a boolean depending on if the string value passed to it
+    as an argument is the name of a day of the week that starts with a T.
+        Otherwise, it should return false.
+        Example: dayOfTheWeekStartsWithT("Monday")     => returns false
+    Example: dayOfTheWeekStartsWithT("Tuesday")     => returns true
+    Example: dayOfTheWeekStartsWithT("Tommy")     => returns false
+// learn this well
+function dayOfTheWeekStartWithT(input) {
+    input = input.toLowerCase();
+
+    if (input === "tuesday" || input === "thursday") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(dayOfTheWeekStartWithT("tomorrow"));
+console.log(dayOfTheWeekStartWithT("Tuesday"));
+console.log(dayOfTheWeekStartWithT("thursday"));
+
+function dayofTheWeekStartWithT(input) {
+    return input.toLowerCase() == "tuesday" || input.toLowerCase() == "thursday";
+}
+
+
+    Bonus 2.
+    Write a function, isValidPassword, that takes in a string argument and returns true or false
+    depending on whether or not all the following conditions are true:
+    1) Must be 6 characters long (only for the sake of this exercise, NOT a best practice)
+2) Contains at least one letter and one number
+3) Contains at least one upper and one lower case letter
+4) Only comprised of letters and numbers
+5) EXTRA BONUS: is not the same forwards and backwards
+
+function isValidPassword(input) {
+    var lengthgood = input.length == 6;
+    var hasAtLeastOneLett = hasLettter(input);
+    var hasAtLeastOneNum = hasNumber(input);
+    var hasLowerCaseLett;
+    var hasUpperCaseLett;
+    var alphaNumeric;
+
+    return lengthgood && hasAtLeastOneLett && hasAtLeastOneNum && hasLowerCaseLett && hasUpperCaseLett && alphaNumeric;
+}
+
+function hasLetter(input) {
+    input = input.toLowerCase();
+
+    return input.includes("a") || input.includes("b") || input.includes("c") ||
+    input.includes("d") || input.includes("e") || input.includes("f") ||
+    input.includes("g") || input.includes("h");
+
+
+}

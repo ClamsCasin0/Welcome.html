@@ -35,8 +35,8 @@ console.log(names[3]);
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-names.forEach(function(element, index, array) {
-    console.log(element);
+names.forEach(function(name) {
+    console.log(name);
 })
     /**
      * TODO:
@@ -53,16 +53,34 @@ names.forEach(function(element, index, array) {
      */
 var array = [1, 2, 3, 4, 5];
 
-function array(i) {
-    return array[0];
+function firstarray(i) {
+    if (Array.isArray(array)) {
+        return array[0];
     }
-
-function array(i) {
-    return array[1];
+}
+function secondarray(i) {
+    if(Array.isArray(array)) {
+        return array[1];
+    }
 }
 
-function array(i) {
-    return array[array.length - 1];
+function lastarray(i) {
+    if(Array.isArray(array)) {
+        return array[array.length - 1];
+    }
 }
 
 })();
+
+
+
+//////////Array Bonuses
+/////////1.
+var numbers = [6, 7, 8, 9, 10];
+
+function average() {
+    return ((numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4]) / 5);
+
+}
+
+/////////////2.

@@ -21,7 +21,9 @@
      */
     //
     var planetsBreakString = planetsArray.join('<br>');
-    console.log(planetsBrString);
+    console.log(planetsBreakString);
+
+    document.write(planetsBreakString);
 
 
 
@@ -31,6 +33,7 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
+     var planetsArray = planetsString.split('|');
 
      var unorderedPlanets = planetsArray.join('</li><li>');
 

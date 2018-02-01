@@ -11,9 +11,19 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+    ////Best if we DONT know the value of the expressions yet
     var person = {};
     person.firstName = "Armando";
     person.lastName = "Segura";
+    ////OR
+    var person = {
+        firstName: "Armando",
+        lastName: "Segura"
+    };
+
+    console.log(person.firstName);
+    console.log(person.lastName);
+    console.log(person.firstName + " " + person.lastName);
 
     /**
      * TODO:
@@ -24,11 +34,26 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    //////Decent
     person.sayHello = function () {
         alert("Hello from " + person.firstName + " " + person.lastname + "!");
     };
-
+     /////BEST
+    person.sayHello = function () {
+        return "Hello from " + person.firstName + " " + person.lastname + "!";
+    };
     console.log(person.sayHello());
+
+////Function Form
+    var person = {
+        firstName: "Armando",
+        lastName: "Segura",
+        sayHello: function () {
+            return "Hello from " + person.firstName + " " + person.lastname + "!";
+
+        }
+    };
+
 
 
     /** TODO:
@@ -45,11 +70,27 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function(shopper) {
+        if(shopper.amount > 200) {
+            shopper.amount = shopper.amount - (shopper.amount * .12);
+        }
+        console.log(shopper.name " spent " + shopper.amount);
+    });
+
+    /////Ryan-O = Lion-Oh one weird trick
+    var shopper = shoppers[1];
+
+    if(shopper.amount > 200) {
+        shopper.amount = shopper.amount - (shopper.amount * .12);
+    };
+
+    console.log(shopper.name " spent " + shopper.amount);
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -63,6 +104,38 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = {
+        title: 'Clockwork',
+        author: {
+            firstName: 'Phillip',
+            lastName: 'Pullman'
+        },
+
+        title: 'Journey into the Whirlwind',
+        author: {
+            firstName: 'Yevgenia',
+            lastName: 'Ginzburg'
+        },
+
+        title: 'Night',
+        author: {
+            firstName: 'Elie',
+            lastName: 'Wiesel'
+        },
+
+        title: 'Brave New World',
+        author: {
+            firstName: 'Aldous',
+            lastName: 'Huxley'
+        },
+
+        title: 'Hamlet',
+        author: {
+            firstName: 'William',
+            lastName: 'Shakespeare'
+        },
+    };
 
     /**
      * TODO:
@@ -88,6 +161,7 @@
      *      ---
      *      ...
      */
+
 
     /**
      * Bonus:

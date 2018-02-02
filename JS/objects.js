@@ -36,11 +36,11 @@
      */
     //////Decent
     person.sayHello = function () {
-        alert("Hello from " + person.firstName + " " + person.lastname + "!");
+        alert("Hello from " + person.firstName + " " + person.lastName + "!");
     };
      /////BEST
     person.sayHello = function () {
-        return "Hello from " + person.firstName + " " + person.lastname + "!";
+        return "Hello from " + person.firstName + " " + person.lastName + "!";
     };
     console.log(person.sayHello());
 
@@ -83,7 +83,7 @@
         console.log(shopper.name " spent " + shopper.amount);
     });
 
-    /////Ryan-O = Lion-Oh one weird trick
+    ///Ryan-O = Lion-Oh one weird trick
     var shopper = shoppers[1];
 
     if(shopper.amount > 200) {
@@ -105,38 +105,45 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books = {
-        title: 'Clockwork',
-        author: {
-            firstName: 'Phillip',
-            lastName: 'Pullman'
+    var books = [
+        {
+            title: 'Clockwork',
+            author: {
+                firstName: 'Phillip',
+                lastName: 'Pullman'
+            }
         },
-
-        title: 'Journey into the Whirlwind',
-        author: {
-            firstName: 'Yevgenia',
-            lastName: 'Ginzburg'
+        {
+            title: 'Journey into the Whirlwind',
+            author: {
+                firstName: 'Yevgenia',
+                lastName: 'Ginzburg'
+            }
         },
-
-        title: 'Night',
-        author: {
-            firstName: 'Elie',
-            lastName: 'Wiesel'
+        {
+            title: 'Night',
+            author: {
+                firstName: 'Elie',
+                lastName: 'Wiesel'
+            }
         },
-
-        title: 'Brave New World',
-        author: {
-            firstName: 'Aldous',
-            lastName: 'Huxley'
+        {
+            title: 'Brave New World',
+            author: {
+                firstName: 'Aldous',
+                lastName: 'Huxley'
+            }
         },
+        {
+            title: 'Hamlet',
+            author: {
+                firstName: 'William',
+                lastName: 'Shakespeare'
+            },
+        }
+    ];
 
-        title: 'Hamlet',
-        author: {
-            firstName: 'William',
-            lastName: 'Shakespeare'
-        },
-    };
-
+    console.log(books[1]);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -162,7 +169,24 @@
      *      ...
      */
 
+    books.forEach(function(book, index)  {
+        var output = "";
+       output += "Book # " + (index + 1) + "\n";
+       output += "Title: " + book.title + "\n";
+       output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+       output += "---\n";
+    });
 
+    console.log(output);
+
+    for (var i = 0; i < books.length; i += 1) {
+        var output = "":
+        output += "Book # " + (i + 1);
+        output += "Title: " books[i].title;
+
+    }
+
+    // document.write(output);
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -173,5 +197,9 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+// function createBook() {
+//     return
+//     }
 
 })();

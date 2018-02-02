@@ -11,7 +11,7 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    ////Best if we DONT know the value of the expressions yet
+        ////Best if we DONT know the value of the expressions yet
     var person = {};
     person.firstName = "Armando";
     person.lastName = "Segura";
@@ -38,7 +38,7 @@
     person.sayHello = function () {
         alert("Hello from " + person.firstName + " " + person.lastName + "!");
     };
-     /////BEST
+    /////BEST
     person.sayHello = function () {
         return "Hello from " + person.firstName + " " + person.lastName + "!";
     };
@@ -53,7 +53,6 @@
 
         }
     };
-
 
 
     /** TODO:
@@ -76,21 +75,28 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function(shopper) {
-        if(shopper.amount > 200) {
+    shoppers.forEach(function (shopper) {
+        if (shopper.amount > 200) {
             shopper.amount = shopper.amount - (shopper.amount * .12);
         }
-        console.log(shopper.name " spent " + shopper.amount);
+        console.log(shopper.name
+        " spent " + shopper.amount
+    )
+        ;
     });
 
     ///Ryan-O = Lion-Oh one weird trick
     var shopper = shoppers[1];
 
-    if(shopper.amount > 200) {
+    if (shopper.amount > 200) {
         shopper.amount = shopper.amount - (shopper.amount * .12);
-    };
+    }
+    ;
 
-    console.log(shopper.name " spent " + shopper.amount);
+    console.log(shopper.name
+    " spent " + shopper.amount
+)
+    ;
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -169,20 +175,22 @@
      *      ...
      */
 
-    books.forEach(function(book, index)  {
+    books.forEach(function (book, index) {
         var output = "";
-       output += "Book # " + (index + 1) + "\n";
-       output += "Title: " + book.title + "\n";
-       output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
-       output += "---\n";
+        output += "Book # " + (index + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---\n";
     });
 
     console.log(output);
 
     for (var i = 0; i < books.length; i += 1) {
-        var output = "":
+        var output = ""
+    :
         output += "Book # " + (i + 1);
-        output += "Title: " books[i].title;
+        output += "Title: "
+        books[i].title;
 
     }
 
@@ -198,8 +206,15 @@
      *   `showBookInfo` function.
      */
 
-// function createBook() {
-//     return
-//     }
+    function createBook(title, author) {
+
+        return books[1]
+    }
+
+    function showBookInfo(books[]) {
+        var output = "";
+        output +=
+
+    }
 
 })();

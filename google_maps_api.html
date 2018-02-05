@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>Google Maps API</title>
+
+<style type="text/css">
+    #map-canvas {
+        width: 770px;
+        height: 481px;
+    }
+</style>
+</head>
+<body>
+<!-- div to hold map -->
+<div id="map-canvas"></div>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOLUmS1EUK9aKfoQaWrpk_BvcxXU8qd7c"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    // (function() {
+        "use strict";
+
+
+        var mapDisplay = document.getElementById('map');
+
+        var options = {
+            zoom: 18;
+            center: {
+                lat: 29.4268,
+                lng: -98.4896
+            }
+        }
+
+        var map =  new google.maps.Map(mapDisplay, options);
+
+        // Render the map
+
+    // })();
+
+
+</script>
+</body>
+</html>

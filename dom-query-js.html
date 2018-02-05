@@ -8,9 +8,10 @@
 
 <button id="changeHeaderBtn">Change Header</button>
 <button id="changeSubBtn">Change SubHeader</button>
-<button id="changeListBtn">Change List</button>
-<button id="changeParaBtn">Change Paragraph</button>
+<button id="changeListBtn">Change Lists</button>
+<button id="changeParaBtn">Change SubParagraph</button>
 
+    <!--///Stop Watch-->
 <h3><time>00:00:00</time></h3>
 <button id="startTimerBtn">Start</button>
 <button id="pauseTimerBtn">Pause</button>
@@ -39,47 +40,7 @@
 <script>
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header");
-
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "Javascript is Cool";
-
-
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
-
-
-        // TODO: Set the text color of subHeader to blue
-        var subHeader = document.getElementById("sub-header");
-        subHeader.style.color = 'blue';
-
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
-
-        // TODO: Set text color on every other list item to grey
-        // listItems.style.color = "#444";
-
-        // TODO: Set text color of li with dbid = 1 to blue
-        // var blueListItem = document.getElementsByClassName()
-
-        for(var i = 0; i < listItems.length; i++) {
-            if(i % 2 == 0) {
-                listItems[i].style.color = "grey";
-            }
-            if(listItems[i].getAttribute("data-dbid") === "1") {
-                listItems[i].style.color = "blue";
-            }
-        }
-
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Complete!, *Metal Slug end stage music plays*"
-
-
-        //////DOM Events
+//////DOM Events
         var changeHeaderBtn = document.getElementById('changeHeaderBtn');
 
         var changeSubBtn = document.getElementById('changeSubBtn');
@@ -87,6 +48,57 @@
         var changeListBtn = document.getElementById('changeListBtn');
 
         var changeParaBtn = document.getElementById('changeParaBtn');
+
+        function changeHeader() {
+
+            // TODO: Uncomment next line and get the main header element by id
+            var mainHeader = document.getElementById("main-header");
+
+            // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+            mainHeader.innerHTML = "Javascript is Cool";
+        }
+
+        function changeSubHeader() {
+
+            // TODO: Uncomment the next line and get the sub header element by id
+            var subHeader = document.getElementById("sub-header");
+
+
+            // TODO: Set the text color of subHeader to blue
+            var subHeader = document.getElementById("sub-header");
+            subHeader.style.color = 'blue';
+        }
+
+        function changeList() {
+            // TODO: Uncomment the next line and get all list items
+            var listItems = document.getElementsByTagName("li");
+
+            // TODO: Set text color on every other list item to grey
+            // listItems.style.color = "#444";
+
+            // TODO: Set text color of li with dbid = 1 to blue
+            // var blueListItem = document.getElementsByClassName()
+
+            for (var i = 0; i < listItems.length; i++) {
+                if (i % 2 == 0) {
+                    listItems[i].style.color = "grey";
+                }
+                if (listItems[i].getAttribute("data-dbid") === "1") {
+                    listItems[i].style.color = "blue";
+                }
+            }
+        }
+
+        function changeParagraph() {
+
+
+            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+            var subParagraphs = document.getElementsByClassName("sub-paragraph");
+
+            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+            subParagraphs[0].innerText = "Mission Complete!, *Metal Slug end stage music plays*"
+        }
+
 
         changeHeaderBtn.addEventListener("click", changeHeader);
 
@@ -133,6 +145,7 @@
 
             timer();
         }
+
         function timer() {
             t = setTimeout(add, 1000);
         }

@@ -65,7 +65,26 @@
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished, *Metal Slug end stage music plays*"
+        subParagraphs[0].innerText = "Mission Complete!, *Metal Slug end stage music plays*"
+
+
+        //////DOM Events
+        var changeHeaderBtn = document.getElementById('changeHeaderBtn');
+
+        var changeSubBtn = document.getElementById('changeSubBtn');
+
+        var changeListnBtn = document.getElementById('changeListbn');
+
+        var changeParaBtn = document.getElementById('changeParaBtn');
+
+        changeHeaderBtn.addEventListener("click", changeheader);
+
+        changeSubBtn.addEventListener("click", changeSubHeader);
+
+        changeListBtn.addEventListener("click", changeListnBtn);
+
+        changeParaBtn.addEventListener("click", changeParaBtn);
+
     })();
 </script>
 </body>

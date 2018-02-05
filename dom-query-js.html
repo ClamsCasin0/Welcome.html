@@ -6,6 +6,17 @@
 </head>
 <body>
 
+<button id="changeHeaderBtn">Change Header</button>
+<button id="changeSubBtn">Change SubHeader</button>
+<button id="changeListBtn">Change List</button>
+<button id="changeParaBtn">Change Paragraph</button>
+
+<h3><time>00:00:00</time></h3>
+<button id="startTimerBtn">Start</button>
+<button id="pauseTimerBtn">Pause</button>
+<button id="resetTimerBtn">Reset</button>
+
+
 <h1 id="main-header">Hello World!</h1>
 <ul>
     <li data-dbid="1">Item 1</li>
@@ -100,18 +111,70 @@
 
          */
         ///1.
+        var h3 = document.getElementsByTagName('h3')[0];
+         startTimerBtn = document.getElementById('startTimerBtn');
+         pauseTimerBtn = document.getElementById('pauseTimerBtn');
+         resetTimerBtn = document.getElementById('resetTimerBtn');
+            seconds = 0, minutes = 0, hours = 0,
+            t;
+
+        function add() {
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes >= 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+
+            h3.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+            timer();
+        }
+        function timer() {
+            t = setTimeout(add, 1000);
+        }
+        timer();
 
         ///2.
-        var startTimerBtn = document.getElementById('startTimerBtn');
-        startTimerBtn.addEventListener("click", startTimerBtn);
+
+        /* Start button */
+        start.onclick = timer;
+
 
         ///3.
-        var resetTimerBtn = document.getElementById('resetTimerBtn');
-        resetTimerBtn.addEventListener("click", resetTimerBtn);
+
+        /* Stop button */
+        stop.onclick = function() {
+            clearTimeout(t);
+
+        }
 
         ///4.
-        var pauseTimerBtn = document.getElementById('pauseTimerBtn');
+
+        /* Clear button */
+
+        clear.onclick = function() {
+            h1.textContent = "00:00:00";
+            seconds = 0; minutes = 0; hours = 0;
+
+        }
+
+
+        startTimerBtn.addEventListener("click", startTimerBtn);
         pauseTimerBtn.addEventListener("click", pauseTimerBtn);
+        resetTimerBtn.addEventListener("click", resetTimerBtn);
+
+
+        ///3.
+
+
+
+        ///4.
+
+
 
 
     })();

@@ -7,8 +7,8 @@
 
 <style type="text/css">
     #map-canvas {
-        width: 770px;
-        height: 481px;
+        width: 800px;
+        height: 300px;
     }
 </style>
 </head>
@@ -28,12 +28,12 @@
         var mapDisplay = document.getElementById('map');
 
         var options = {
-            zoom: 18;
+            zoom: 18,
             center: {
-                lat: 29.4268,
-                lng: -98.4896
+                lat: 29.42497,
+                lng: -98.48748
             }
-        }
+        };
 
         var map =  new google.maps.Map(mapDisplay, options);
 

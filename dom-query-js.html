@@ -73,17 +73,46 @@
 
         var changeSubBtn = document.getElementById('changeSubBtn');
 
-        var changeListnBtn = document.getElementById('changeListbn');
+        var changeListBtn = document.getElementById('changeListBtn');
 
         var changeParaBtn = document.getElementById('changeParaBtn');
 
-        changeHeaderBtn.addEventListener("click", changeheader);
+        changeHeaderBtn.addEventListener("click", changeHeader);
 
         changeSubBtn.addEventListener("click", changeSubHeader);
 
-        changeListBtn.addEventListener("click", changeListnBtn);
+        changeListBtn.addEventListener("click", changeList);
 
-        changeParaBtn.addEventListener("click", changeParaBtn);
+        changeParaBtn.addEventListener("click", changeParagraph);
+
+
+        /**
+         * BONUS Exercise:
+         Create a stop watch app with the following features:
+         1) stop watch display that shows the time to the nearest 100th of a second
+         2) start button to start the stop watch
+         3) reset button to reset the time to zero
+         4) pause button to stop the stop watch
+         Additional Features:
+         1) store a list of times in an aside div that are appended to every time the reset button is hit
+         2) add delete buttons for each stored time that removes the time from the aside div
+         3) add keyboard events to control starting, pausing, and resetting
+
+         */
+        ///1.
+
+        ///2.
+        var startTimerBtn = document.getElementById('startTimerBtn');
+        startTimerBtn.addEventListener("click", startTimerBtn);
+
+        ///3.
+        var resetTimerBtn = document.getElementById('resetTimerBtn');
+        resetTimerBtn.addEventListener("click", resetTimerBtn);
+
+        ///4.
+        var pauseTimerBtn = document.getElementById('pauseTimerBtn');
+        pauseTimerBtn.addEventListener("click", pauseTimerBtn);
+
 
     })();
 </script>

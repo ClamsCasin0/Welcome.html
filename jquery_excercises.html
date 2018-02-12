@@ -6,12 +6,41 @@
 </head>
 <body>
 
+<h1 id="teddy" class="codeup">Guttentag Teddy Codeup!</h1>
+
+<p id="content" class="codeup"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, odio temporibus! Accusamus asperiores distinctio, ex fugiat laudantium minima modi, nostrum, odio odit possimus quae qui recusandae saepe ut voluptas voluptatem!</p>
+
+<div id="spread" class="codeup">
+    <ul id="noOrder" class="Listy">
+        <li id="Robert" class="inList">Bob</li>
+        <li id="Peterphilliah" class="inList">Petah</li>
+        <li id="Italiano" class="inList">Machavelli</li>
+    </ul>
+</div>
 
 <script type="text/javascript" src="JS/jquery-2.2.4.js"></script>
 <script>
 $(document).ready(function() {
     "use strict";
 alert( 'The DOM has finished loading!' );
+
+$('li').css('font-size', '20px');
+
+$('h1, p, li').css('background-color', 'yellow');
+
+var showH1 = $('h1').html();
+    alert(showH1);
+
+
+
+// $('#codeup').css('border-color', 'red').css('border-size', '1px');
+
+
+// var showContents = $('#teddy').html();
+//     alert(showContents);
+//
+// var moreContent = $('#content').html();
+//     alert(moreContent);
 
 });
 </script>

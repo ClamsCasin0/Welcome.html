@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Contra</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            color: greenyellow;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1 class="">Konami Code</h1>
+
+<script src="JS/jquery-2.2.4.js"></script>
+<script>
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+    "use strict";
+    $(document).ready(function() {
+        var keys = {
+            up: 38,
+            down: 40,
+            left: 37,
+            right: 39,
+            b: 66,
+            a: 65,
+            enter: 13
+        };
+        var konamiCode = [
+            keys.up,
+            keys.up,
+            keys.down,
+            keys.down,
+            keys.left,
+            keys.right,
+            keys.left,
+            keys.right,
+            keys.b,
+            keys.a,
+            keys.enter
+        ];
+        var codeIndex = 0;
+        $(document).on('keyup', function(e) {
+            var keyPressed = e.keyCode;
+            var currentKey = konamiCode[codeIndex];
+
+            //display key press
+            $('#key-display').html(e.key);
+
+            if (keyPressed === currentKey) {
+                // if correct
+                codeIndex++;
+            } else {
+                // if incorrect
+                codeIndex = 0;
+            }
+            if (codeIndex === konamiCode.length) {
+                alert('You have 30 extra lives!');
+                $("body").css('background-color', 'red');
+                $("h1").css('color', 'purple');
+            }
+        });
+    });
+</script>
+</body>
+</html>

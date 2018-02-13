@@ -20,26 +20,40 @@
 
 <script type="text/javascript" src="JS/jquery-2.2.4.js"></script>
 <script>
+    //
 $(document).ready(function() {
     "use strict";
 alert( 'The DOM has finished loading!' );
+//
+    //
+// $("login").click(function(event) {
+//     event.preventDefault();
+// })
+//
+    //
 
-$("h1").click(function() {
+$("h1").click(function(e) {
     (this).css('background-color', 'yellow');
+    //or $(event.target).css('background-color', 'yellow');
     });
 
-$("p").dbclick(function(e) {
-    (this).css('font-size': '18px');
+$("p").dblclick(function(e) {
+    ("p").css('font-size', '18px');
 });
 
 $("li").hover(
-    function() {
-        $(this).css('text-color', 'red');
+    function(event) {
+        $("li").css('color', 'red');
     },
-    function() {
-        $(this).css('text-color', 'black');
+    function(event) {
+        $("li").css('color', 'black');
     }
 );
+
+// toggleclass usage
+// $("h1").click(function(event) {
+//     $(event.target).toggleclass("highlight");
+// });
 
 // $('li').css('font-size', '20px');
 //

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JQuery FaQ</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style type="text/css">
         .invisible {
             display: none;
@@ -12,13 +13,35 @@
 
 </head>
 <body>
+
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span id="closeAlert" aria-hidden="true">&times;</span></button>
+    <strong>ACHTUNG!</strong> Better to check yourself before you to wreck yourself!
+</div>
+
+<div id="myModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span id="closeBtn" aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Yo! Young Blood</h4>
+            </div>
+            <div class="modal-body">
+                <p>To not wreck oneself, one must check himself&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--At the top of the page, add a div with two elements, an h1 that reads-->
 <!--"Would you like to sign up for our newsletter?" and-->
 <!--a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.-->
 
 <div id="main-div">
-    <h1>"Would you like to sign up for our newsletter?"</h1>
-    <span id="hideDiv"> X </span>
+    <h1>"Would you like to sign up for our newsletter?"<span id="hideDiv"> X </span></h1>
 </div>
 
 <h2 id="register">"Would you like to register for this site?"</h2>
@@ -100,15 +123,19 @@
     $(document).ready(function() {
         "use strict";
 
+        // $('#myModal').on('shown.bs.modal', function () {
+        //     $('#myInput').focus()
+        // })
+
         $('#hideDiv').click(function() {
            $('#main-div').hide();
+           //or $(this).parent().parent().hide();
         });
         // <!--The uls next to each h3 that contain facts about each park should start out hidden,-->
         // <!--and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.-->
 
 
         $('ul').hide();
-
         $('h3').click(function() {
             $(this).next().slideToggle();
         });
@@ -120,7 +147,18 @@
 
            $('#register').hide().delay(8000).fadeIn();
 
+            //closes alert modal
+            $('#closeAlert').click(function(){
+               $('.alert-warning').hide();
+            });
 
+        // $('#myModal').modal('show')
+
+            $('#myModal').hide().delay(8000).fadeIn();
+
+        $('#closeBtn').click(function(){
+            $('#myModal').hide();
+        });
 
         // $("#Btn1").click(function() {
         //     $("ul").each(function(index, element) {

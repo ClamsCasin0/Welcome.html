@@ -19,12 +19,18 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button id="toolRefresh">Refresh</button>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
 (function() {
     "use strict";
     // TODO: Create an ajax GET request for /data/inventory.json
+    //
+    // $.ajax("./data/inventory.json").done(function(responseData) {
+    //    console.log(responseData[0].orderedBy);
+    // });
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
@@ -32,8 +38,32 @@
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
 
+        var request = $.ajax("data/inventory.json");
 
-    // Your online tool store should load data from the JSON file using a get request and
+        request.fail(function(jqXhr, status, error) {
+            console.log("There was an error!");
+            console.log("Response status: " + status);
+            console.log("Error obj: " + error);
+        });
+        request.done(function(data) {
+            console.log(data);
+            data.forEach(function(tool) {
+                addRowToTable(tool);
+            });
+        });
+        function addRowToTable(tool) {
+            var htmlString = "";
+            htmlString += "<tr>";
+            htmlString += "<td>" + tool.title + "</td>";
+            htmlString += "<td>" + tool.quantity + "</td>";
+            htmlString += "<td>$" + tool.price + "</td>";
+            htmlString += "<td>" + tool.categories + "</td>";
+            htmlString += "</tr>";
+            $("#insertProducts").append(htmlString);
+        }
+
+
+        // Your online tool store should load data from the JSON file using a get request and
     // append the data to the table. You will need to use either $.ajax() or $.get(), and a .done() callback.
 
 
@@ -41,7 +71,23 @@
 
 
     //     Add a "Refresh" button that will load inventory.json for you without having to refresh the entire page.
+        function updateTool() {
+            var ajaxReq = $.ajax("data/inventory.json");
 
+            ajaxReq.done(function(data) {
+               console.log(data);
+            });
+
+            ajaxReq.fail(function(tool, status) {
+               console.log(status);
+            });
+        }
+
+
+
+        $("#toolRefresh").click(updateTool);
+
+        updateTool();
 
     //     Add Twitter Bootstrap to your online store with some custom CSS to make the style your own.
 

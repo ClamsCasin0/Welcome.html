@@ -48,5 +48,14 @@
             "hands"
         ],
         "price": 6
-    }
+    }, {
+        "title": "AirCompressor",
+        "quantity": 10,
+        "categories": [
+            "tool",
+            "machine",
+            "air"
+        ],
+        "price": 300
+}
 ]

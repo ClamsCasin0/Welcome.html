@@ -44,34 +44,15 @@ const languages = ['html, css, jquery, js'];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
-  name: name,
-  email: email,
-  languages: languages
-});
-
-let name = users.name;
-let email = users.email;
-let languages = users.languages;
-
-let users = {
   name,
-    email,
-    languages
-};
-console.log(users.push());
-
-
-
-let { name, email, languages } = users.push();
+  email,
+  languages
+});
 
 // TODO: replace `var` with `let` in the following variable declarations
 let emails = [];
 let names = [];
 
-let [] = {
-  emails,
-    names
-};
 // TODO: rewrite the following using arrow functions
 users.forEach(function(user) {
   return emails.push(user.email);
@@ -80,6 +61,8 @@ users.forEach(function(user) {
 users.forEach(user => {
     return emails.push(user.email);
 });
+//or *return is implicit, must be same line*
+// users.forEach(user => emails.push(user.email));
 
 
 users.forEach(function(user) {
@@ -89,12 +72,19 @@ users.forEach(function(user) {
 users.forEach((user) => {
     return names.push(user.name);
 });
+//users.forEach(user => names.push(user.name));
 
-
+///**combined functions
+users.forEach(user => {
+  emails.push(user.email);
+  names.push(user.name);
+});
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
 users.forEach(function(user) {
+
+
 
 
   // TODO: rewrite the code below to use object destructuring assignment
@@ -105,7 +95,14 @@ users.forEach(function(user) {
   const email = user.email;
   const languages = user.languages;
 
+
 const { name, email, languages } = users;
+
+//use in function
+    users.forEach(({name, email, languages}) => {
+        developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
+    });
+      
 
   // TODO: rewrite the assignment below to use template strings
   developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
@@ -118,6 +115,7 @@ developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(", 
 // TODO: Use `let` for the following variable
 let list = '<ul>';
 
+
 // TODO: rewrite the following loop to use a for..of loop
 
 developers.forEach(function (developer) {
@@ -126,8 +124,8 @@ developers.forEach(function (developer) {
 for(let developer of developers) {
 
   // TODO: rewrite the assignment below to use template strings
-  list += '<li>' + developer + '</li>';
-});
+  list += '<li>${developer}</li>';
+}
 list += '</ul>';
 
 document.body.innerHTML = list;

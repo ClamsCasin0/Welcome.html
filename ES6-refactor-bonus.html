@@ -54,9 +54,9 @@
         "use strict";
 
         var showBtn = document.getElementById("showBtn");
-
+        /////
         let showBtn = $("#showBtn");
-
+        /////
 // var = movies = [
         let  movies = [
             {
@@ -82,7 +82,16 @@
 
         let { name, year, genre } = movies;
 
+        let movies = ["LOTR", "The Matrix", "Shine"];
 
+        let [movie1, movie2, movie3] = movies;
+        //////
+
+        function buiildMovieHTML({name, year, genre}) {
+
+        }
+
+        const movie = {}
 
         function buildMovieHTML(movie) {
             var html = "";

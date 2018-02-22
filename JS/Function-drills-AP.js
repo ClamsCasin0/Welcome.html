@@ -11,12 +11,13 @@ console.log(sayHello("AJ"));
 // any capitalization and uppercases the first character and lowercases
 // the rest of the characters of a string.
 function capitalize(string) {
+    return string.toUpperCase().charAt(0);
 
 }
 
 //     Write a function named upperCase(string)
 function upperCase(string) {
-
+    return string.toUpperCase();
 }
 // Make a function named identity(input) that returns the input exactly as provided.
 function identity(input) {
@@ -31,10 +32,13 @@ function isEven(number) {
     return number % 2 == 0;
 }
 // Make a function named isPositive(number)
-function isPositive(input) {
-    return input > 0;
+function isPositive(number) {
+    return number > 0;
 }
 // Make a function named isNegative(number)
+function isNegative(number) {
+    return number < 0;
+}
 // Make a function named isBoolean(input)
 function isBoolean(input) {
     return typeof input === "boolean";
@@ -54,12 +58,34 @@ function isBoolean(input) {
 // Make a function named isSpace(letter) that returns if a character is a space character
 // Make a function named hasSpaces(string) that returns if a string has any space characters
 // Make a function named isZero(number)
+function isZero(number) {
+    return number === 0;
+}
 // Make a function named increment(number) that returns a number plus one
+function increment(number) {
+    return number + 1;
+}
 // Make a function named decrement(number) that returns a number minus one
+function decrement(number) {
+    return number - 1;
+}
 // Make a function named isFive(input)
+function isFive(input) {
+    return input === 5;
+}
 // Make a function named addFive(input) that adds five to some input.
+function addFive(input) {
+    return input + 5;
+}
 //     Make a function named isMultipleOfFive(input)
+function isMultipleOfFive(input) {
+    return input % 5 == 0;
+}
 // Make a function named isThree(input)
+function isThree(input) {
+    return input === 3;
+
+}
 // Make a function named isMultipleOfThree(input)
 // Make a function named isMultipleOfThreeAndFive(input)
 // Write a function named lowerCase(string)

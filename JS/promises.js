@@ -52,36 +52,39 @@ wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 //Create a function that accepts a github username, and returns a promise that resolves with the date of the last commit that user made. Reference the github api documentation to achieve this.
 
 
+//cleanest
+function lastCommitDate(username) {
+    let timeOfDates = [];
+    const url = 'https://api.github.com/users/' + username + '/events/public';
+    const authorToken = {
+        headers: {
+            'Authorization': 'token TOKEN GOES HERE'
+        }
+    };
 
-// function lastCommitDate(username) {
-//     let timeOfDates = [];
-//     const address = `https://api.github.com/users/${username}/events/public`;
-//     const authorToken = {
-//         headers: {
-//             'Authorization': 'token 9fe608508a84e43ec59f5f01ca3f4db7fa877ef1'
-//         }
-//     };
-//
-//     return fetch(address, authorToken)
-//         .then(response => response.json())
-//         .then(repositories => {
-//             respositories.map(repo => {
-//                 timeOfDates.push(repo.updated_at);
-//             });
-//             timeOfDates.sort();
-//             document.innerText = new Date(timeOfDates.length-1));
-//         });
-// }
-//
-// lastCommitDate("ClamsCasin0");
+     fetch(url, authorToken)
+        .then(response => response.json())
+        .then(repositories => {
+            repositories.map(repo => {
+                timeOfDates.push(repo.updated_at);
+            });
+            timeOfDates.sort();
+            document.querySelector('span').innerText = new Date(timeOfDates[timeOfDates.length -1]);
+            console.log(timeOfDates);
+        });
+}
+
+lastCommitDate("ClamsCasin0");
 
 
+
+//first attempt
 const dateOfLastCommit = username => {
     const url = `https://api.github.com/users/${username}/events/public`;
 
     const options = {
         headers: {
-            'Authorization': 'token 9fe608508a84e43ec59f5f01ca3f4db7fa877ef1'
+            'Authorization': 'token TOKEEN GO HERE'
         }
     };
 

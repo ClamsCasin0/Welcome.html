@@ -24,17 +24,20 @@ function identity(input) {
 }
 //     Make a function named isOdd(number)
 function isOdd(number) {
-    number % 2 !== 0;
+   return number % 2 !== 0;
 }
 // Make a function named isEven(number)
 function isEven(number) {
     return number % 2 == 0;
 }
 // Make a function named isPositive(number)
+function isPositive(input) {
+    return input > 0;
+}
 // Make a function named isNegative(number)
 // Make a function named isBoolean(input)
 function isBoolean(input) {
-    typeof === "boolean";
+    return typeof input === "boolean";
 }
 // Make a function named isTrue(boolean)
 // Make a function named isFalse(boolean)

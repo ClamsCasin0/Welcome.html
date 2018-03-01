@@ -1,0 +1,317 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/pizza-time.css">
+
+</head>
+<body>
+
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Pizza Time Machine</a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Order Online<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Menu</a></li>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter your Zip#">
+                    </div>
+                    <button type="submit" class="btn btn-default">Find a Nearby Store!</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Sign up/in for quick checkout!</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <header class="jumbotron text-center hidden-xs">
+        <h1 class="">Pizza Time Machine!</h1>
+        <p>Leave your hunger in the Past! Travel pizza to your Future!</p>
+    </header>
+
+
+    <main class="container">
+
+    <h2 class="text-center">Build your own Pizza!</h2>
+
+    <ul class="nav nav-pills" role="tablist">
+        <li role="presentation"><a href="#">Size and Crust <span class="badge">1</span></a></li>
+        <li role="presentation"><a href="#">Cheese and Sauce <span class="badge">2</span></a></li>
+        <li role="presentation"><a href="#">Toppings <span class="badge">3</span></a></li>
+    </ul>
+    <main class="container">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Choose size and crust</h3>
+        </div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <div class="panel-heading">Back-to-the-Fusion Pan and Hand-tossed</div>
+                    <div class="panel-body">
+                        <p>'1955' Italian 'thyme-lined' paradoxical combo of Pan and Hand Tossed crust</p>
+
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-info">
+                            <div class="radio">
+                                <label>
+                                    <input class="active" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        <h5>Personal ( 6" )</h5>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item list-group-item-info">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        Medium ( 10" )
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item list-group-item-info">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        Large ( 13" )
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Your time is running "Thin" Crust</div>
+                    <div class="panel-body">
+                        A crust thrusted rapidly through Time, so you know it's Crispy
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="radio">
+                                <label>
+                                    <input class="active" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        Personal ( 6" )
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        Medium ( 10" )
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        Large ( 13" )
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            <div class="panel-footer">
+                <button type="submit" class="btn btn-default">Next Step
+                    <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </button>
+            </div>
+            </div>
+        </div>
+            </div>
+            </main>
+
+
+
+
+
+
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Choose cheese and sauce</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Cheese?</div>
+                        <div class="panel-body">
+                            <p>Cheese</p>
+                            <ul class="list-group">
+
+                                <select class="form-control">
+                                    <option>Light</option>
+                                    <option>Regular</option>
+                                    <option>Extra</option>
+                                </select>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Sauce?</div>
+                            <div class="panel-body">
+                                <p>How much? "A man with no sauce is lost, but that same man can be lost in the sauce"</p>
+                                <ul class="list-group">
+
+                                    <select class="form-control">
+                                        <option>No sauce "Lost"</option>
+                                        <option>Light</option>
+                                        <option>Regular</option>
+                                        <option>Extra "Lost in the sauce"</option>
+                                    </select>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="panel panel-default">
+
+                                <div class="panel-body">
+                                    <p>Type of Sauce</p>
+                                    <ul class="list-group">
+
+                                        <select class="form-control">
+                                            <option>Thyme-infused</option>
+                                            <option>Garlic-Tomato</option>
+                                            <option>Traditional</option>
+                                        </select>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
+                            <div class="panel-footer">
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>Previous Step
+                                </button>
+
+                                <button type="submit" class="btn btn-default">Next Step
+                                    <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Choose Toppings</h3>
+            </div>
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-heading">'Time' to Meat</div>
+                    <div class="panel-body">
+
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="radio">
+                                <label>
+                                    <input class="active" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    <h5>Personal ( 6" )</h5>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Medium ( 10" )
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    Large ( 13" )
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+
+
+
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Your time is running "Thin" Crust</div>
+                        <div class="panel-body">
+                            A crust thrusted rapidly through Time, so you know it's Crispy
+
+
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="radio">
+                                    <label>
+                                        <input class="active" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        Personal ( 6" )
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        Medium ( 10" )
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                        Large ( 13" )
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel-footer">
+                        <button type="submit" class="btn btn-default">'It's about Time'
+                            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+    </main>
+</body>
+</html>
